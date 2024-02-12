@@ -1,0 +1,34 @@
+@import "../../../styles.scss";
+
+.info-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__text {
+    margin: 0px 10px 0 0;
+    font-family: $font-family-main;
+    font-size: $font-big;
+    font-weight: 700;
+    text-align: left;
+    color: #000;
+  }
+
+  &__img {
+    width: 23px;
+    height: 26px;
+  }
+}
+
+.info-content {
+  font-family: $font-family-main;
+  font-size: $font-big;
+  line-height: 1;
+  text-align: left;
+  color: #000;
+}

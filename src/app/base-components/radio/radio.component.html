@@ -1,0 +1,11 @@
+<span class="wrapper" [formGroup]="parentForm">
+  <input
+    class="radio"
+    type="radio"
+    [id]="id"
+    [value]="name"
+    [formControlName]="formControlName"
+    [checked]="parentForm.value.occupation === name"
+  />
+  <label [for]="id">{{ name }}</label>
+</span>

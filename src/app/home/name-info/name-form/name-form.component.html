@@ -1,0 +1,35 @@
+<form [formGroup]="nameForm" (ngSubmit)="onSubmit()">
+  <div class="wrapper">
+    <div class="header">
+      <app-button class="button-close" (click)="onClose()">
+        <img src="./assets/close-img.png" alt="Close button" />
+      </app-button>
+    </div>
+    <div class="content">
+      <app-input
+        id="firstName"
+        name="Имя"
+        [parentForm]="nameForm"
+        [formControlName]="'firstName'"
+      ></app-input>
+      <app-input
+        id="lastName"
+        name="Фамилия"
+        [parentForm]="nameForm"
+        [formControlName]="'lastName'"
+      ></app-input>
+    </div>
+    <div class="footer">
+      <app-button
+        class="button-primary"
+        type="submit"
+        [disabled]="!nameForm.valid"
+      >
+        Сохранить
+      </app-button>
+      <app-button class="button-secondary" type="button" (click)="onClose()">
+        Отмена
+      </app-button>
+    </div>
+  </div>
+</form>

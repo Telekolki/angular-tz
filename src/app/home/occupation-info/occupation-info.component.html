@@ -1,0 +1,23 @@
+<div class="info-form">
+  <div class="info-header">
+    <div class="info-header__text">Род деятельности</div>
+    <app-button (click)="onEditButtonClicked()" class="button-primary">
+      <img
+        class="info-header__img"
+        src="./assets/edit-img.png"
+        alt="Edit button"
+      />
+    </app-button>
+  </div>
+  <div class="info-content">
+    <p>
+      {{ user.occupation }}
+    </p>
+  </div>
+</div>
+
+<ng-container *ngIf="isOpened">
+  <app-popup>
+    <app-occupation-form (isClosed)="onIsClosedEmitted()" />
+  </app-popup>
+</ng-container>

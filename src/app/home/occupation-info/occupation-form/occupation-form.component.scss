@@ -1,0 +1,40 @@
+@import "../../../../styles.scss";
+
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 21px;
+}
+
+.content {
+  font-family: $font-family-main;
+  font-size: 16px;
+  line-height: 2;
+  overflow-y: auto;
+  margin: 0px 40px;
+  box-sizing: border-box;
+  height: 220px;
+  padding: 0px 21px;
+}
+
+.footer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 17px;
+  width: 100%;
+  min-height: 96px;
+  min-width: 600px;
+  background-color: lightgrey;
+  border-radius: 0px 0px 10px 10px;
+  padding: 21px 46px;
+}

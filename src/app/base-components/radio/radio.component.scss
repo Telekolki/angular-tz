@@ -1,0 +1,36 @@
+@import "../../../styles.scss";
+
+label {
+  margin-left: 5px;
+}
+
+.radio {
+  margin-bottom: 5px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border: solid 2px $gunsmoke;
+  border-radius: 28px;
+  background-color: #fff;
+  vertical-align: middle;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  cursor: pointer;
+
+  &:hover {
+    @include radio-theme;
+    background: $aztec-purple;
+    opacity: 0.3;
+  }
+
+  &:focus {
+    @include radio-theme;
+    opacity: 1;
+  }
+
+  &:checked {
+    @include radio-theme;
+    background: $aztec-purple-border;
+    opacity: 1;
+  }
+}

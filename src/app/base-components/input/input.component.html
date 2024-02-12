@@ -1,0 +1,13 @@
+<span [formGroup]="parentForm">
+  <label [for]="id" class="input">
+    <input
+      [id]="id"
+      type="text"
+      [placeholder]="name"
+      [formControlName]="formControlName"
+      (focus)="onFocus()"
+      (blur)="onBlur()"
+    />
+    <span [@nameLabel]="nameLabelState"> {{ name }} </span>
+  </label>
+</span>

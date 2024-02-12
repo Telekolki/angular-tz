@@ -1,0 +1,51 @@
+@import "../../../styles.scss";
+
+button {
+    height: 44px;
+    padding: 0px 14px;
+}
+
+:host-context(.button-primary) button {
+    @include button-theme($aztec-purple, $periwinkle-blue);
+
+    &:hover {
+        background-image: linear-gradient(to top, $aztec-purple-border, $periwinkle-blue);
+    }
+
+    &:focus {
+        border: $aztec-purple-border;
+    }
+
+    &:active {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(to top, $aztec-purple, $periwinkle-blue);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+ }
+ :host-context(.button-secondary) button { 
+    @include button-theme($gunsmoke, $silver-sand);
+
+    &:hover {
+        background-image: linear-gradient(to top, $carbon-grey, $grey-cloud);
+    }
+
+    &:focus {
+        background-image: linear-gradient(to top, $gunsmoke, $silver-sand);
+        border: $aztec-purple-border;
+    }
+
+    &:active {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(to top, $gunsmoke, $silver-sand);
+    }
+ }
+
+ :host-context(.button-close) button {
+        background-color: white;
+        border: black;
+        cursor: pointer;
+        padding: 0px 0px;
+ }
+
+        

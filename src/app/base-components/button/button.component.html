@@ -1,0 +1,11 @@
+<span id="button">
+  <button
+    type="button"
+    class="button"
+    [disabled]="disabled"
+    [type]="type"
+    (click)="onClickButton($event)"
+  >
+    <ng-content></ng-content>
+  </button>
+</span>
